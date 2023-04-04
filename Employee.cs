@@ -2,6 +2,9 @@ namespace CatWorx.BadgeMaker
 {
     class Employee
     {
+       public string GetCompanyName() {
+        return "Cat Worx";
+       }
        private string FirstName;
        private string LastName;
        private int Id;

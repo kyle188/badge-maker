@@ -1,7 +1,7 @@
 # Badge Maker
 
 ## Description
-A simple C# app made for printing badges with name, ID, and Photo.
+A simple C# application that creates employee ID badges with name, ID, company name, and photo.
 
 ## Questions
 
