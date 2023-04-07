@@ -58,12 +58,15 @@ namespace CatWorx.BadgeMaker
             {
                 for (int i = 0; i < employees.Count; i++)
                 {
+                    //badge template
                     SKImage photo = SKImage.FromEncodedData(await client.GetStreamAsync(employees[i].GetPhotoUrl()));
                     SKImage background = SKImage.FromEncodedData(File.OpenRead("badge.png"));
                     SKBitmap badge = new SKBitmap(BADGE_WIDTH, BADGE_HEIGHT);
                     SKCanvas canvas = new SKCanvas(badge);
+                    //background photo
                     canvas.DrawImage(background, new SKRect(0, 0, BADGE_WIDTH, BADGE_HEIGHT));
                     canvas.DrawImage(photo, new SKRect(PHOTO_LEFT_X, PHOTO_TOP_Y, PHOTO_RIGHT_X, PHOTO_BOTTOM_Y));
+                    //company name
                     employees[i].GetCompanyName();
                     SKPaint paint = new SKPaint();
                     paint.TextSize = 42.0f;
